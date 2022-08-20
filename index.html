@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Form.css">
+    <link rel="stylesheet" href="style.css">
     <title>SMP Form</title>
 </head>
 <body>
@@ -15,19 +15,19 @@
           <!-- Student Name -->
           <div class="form-element">
             <label for="student-name">Student Name</label>
-            <input type="text" autoComplete='off' name='student-name' class='field' id="student-name" />
+            <input type="text" autoComplete='off' name='student-name' class='field' id="student-name" required />
             </div>
   
           <!-- Roll Number -->
             <div class="form-element">
             <label for="roll-number">Institute Roll Number</label>
-            <input type="text" autoComplete='off' name="roll-number" class='field' id="roll-number" />
+            <input type="text" autoComplete='off' name="roll-number" class='field' id="roll-number" required />
             </div>
   
           <!-- Fathers Name -->
             <div class="form-element">
             <label for="fathers-name">Father's Name</label>
-            <input type="text" autoComplete='off' name="fathers-name" class='field' id="fathers-name" />
+            <input type="text" autoComplete='off' name="fathers-name" class='field' id="fathers-name" required />
             </div>
   
           <!-- Batch Year -->
@@ -45,7 +45,7 @@
           <!-- Program of Study -->
             <div class="form-element">
             <label for="program-of-study">Program of Study</label>
-            <select autoComplete='off' name="program-of-study" class='field' id="program-of-study">
+            <select autoComplete='off' name="program-of-study" class='field' id="program-of-study" required>
             <option disabled selected value> -- Select an option -- </option>
             <option value="2021-2025">B.Tech</option>
             <option value="2021-2025">M.Tech</option>
@@ -55,7 +55,7 @@
           <!-- Branch of Study -->
             <div class="form-element">
             <label for="branch-of-study">Branch of Study</label>
-            <select autoComplete='off' name="branch-of-study" class='field' id="branch-of-study">
+            <select autoComplete='off' name="branch-of-study" class='field' id="branch-of-study" required>
             <option disabled selected value> -- Select an option -- </option>
             <option value="2021-2025">Computer Science & Engineering (CSE)</option>
             <option value="2021-2025">Electronics & Communication Engineering (ECE)</option>
@@ -66,24 +66,23 @@
           <!-- Application For -->
             <div class="form-element">
             <label for="application-for">Application for</label>
-            <select autoComplete='off' name="application-for" class='field' id="application-for">
+            <select autoComplete='off' name="application-for" class='field' id="application-for" required>
             <option disabled selected value> -- Select an option -- </option>
             <option value="leave">Leave</option>
             <option value="documents">Documents</option>
             </select>
             </div>
 
-
             <!-- Optional Things -->
-            <div class="form-element description">    <!-- This field will appear only when we choose the Leave option in the Application for field -->
+            <div class="form-element description hidden" id="reason-div">    <!-- This field will appear only when we choose the Leave option in the Application for field -->
                 <label for="reason">Reason</label>
-                <textarea autoComplete='off' name="reason"  class='field textarea' id="reason" cols="10" rows="5"></textarea>
+                <textarea autoComplete='off' name="reason"  class='field textarea' id="reason" cols="10" rows="5" required></textarea>
             </div>
 
 
-            <div class="form-element">    <!-- This field will appear only when we choose the Document option in the Application for field -->
+            <div class="form-element hidden" id="document-div">    <!-- This field will appear only when we choose the Document option in the Application for field -->
                 <label for="document-selection">Document</label>
-                <select autoComplete='off' name="document-selection" class='field' id="document-selection">
+                <select autoComplete='off' name="document-selection" class='field' id="document-selection" required>
                 <option disabled selected value> -- Select an option -- </option>
                 <option value="bonafide">Bonafide Certificate</option>
                 <option value="fee-receipt">Fee Receipt</option>
@@ -96,27 +95,27 @@
                 </select>
             </div>
 
-            <div class="form-element">    <!-- This field will appear only when we choose the Fee Receipt or Fee Demand Letter option in the Document field -->
+            <div class="form-element hidden" id="semester-div">    <!-- This field will appear only when we choose the Fee Receipt or Fee Demand Letter option in the Document field -->
                 <label for="semester">Semester</label>
-                <input type="text" autoComplete='off' name="semester" class='field' id="semester" />
+                <input type="text" autoComplete='off' name="semester" class='field' id="semester" required/>
             </div>
 
-            <div class="form-element">    <!-- This field will appear only when we choose the Transcript option in the Application for field -->
+            <div class="form-element hidden" id="transcript-div">    <!-- This field will appear only when we choose the Transcript option in the Application for field -->
             <div>Transcript Application Form</div>
             <div>--Link--</div>
             </div>
 
-            <div class="form-element">    <!-- This field will appear only when we choose the Migration Certificate or Transcript option in the Application for field -->
+            <div class="form-element hidden" id="fee-reciept-div">    <!-- This field will appear only when we choose the Migration Certificate or Transcript option in the Application for field -->
                 <label for="semester">Upload Fee Receipt</label>
-                <input type="file" autoComplete='off' id="semester" class='field file' name="semester"></input>
+                <input type="file" autoComplete='off' id="semester" class='field file' name="semester" required></input>
             </div>
 
             <div class="btn-container">
                 <button class='btn' type='submit'>Submit</button>
             </div>
-
         </form>
     </div>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>

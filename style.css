@@ -13,6 +13,7 @@ body{
     height: 100vh;
     margin: 0;
 }
+
 .box{
     /* border: 2px solid purple; */
     display: flex;
@@ -111,11 +112,15 @@ body{
     cursor: pointer;
 }
 
+.hidden{
+    display: none;
+    border: 2px solid red;
+}
 
 @media (max-width: 1450px){
-.submit-heading{
-    width: 1200px;
-}
+    .submit-heading{
+        width: 1200px;
+    }
 
     .form{
         width: 1200px;
@@ -205,7 +210,6 @@ body{
 @media (max-width: 650px){
     .submit-heading{
         width: 400px;
-        margin-left: 5px;
     }
             
     .form{
